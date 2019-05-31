@@ -1,10 +1,10 @@
 import React from 'react';
-import FunPage from './FunPage'
+import FunStuff from './FunStuff'
 
 export default function Child (props){
     return(
         <div>
-            <FunPage changeState={props.changeState}/>
+            <FunStuff changeState={props.changeState}/>
         </div>
     )
 }

@@ -8,43 +8,37 @@ export default class App extends Component{
 constructor(props){
 super(props)
 this.state={
-  fun:false,
+  fun:'Wow, So Much Fun I Cant Even!',
+  noFun:"I Feel Dead Inside"
 }
 }
 
 renderLogic(){
-if(this.state.fun){
-  return(
+return (
+  <div>
     <Route
       path='/FunPage'
       render={()=>
-        <Child changeState={(e)=>this.changeState(e)}/>
+        <Child changeState={()=>this.changeState()}/>
       }  
     />
-  )
-  }
-  else{
-    return(
+  
       <Route
         exact path= '/'
         render={()=>
-          <Main changeState={(e)=>this.changeState(e)}/>
+          <Main changeState={()=>this.noFun()}/>
         }
       />
-    )
-  }
+</div>
+)
 }
 
-changeState(e){
-  e.preventDefault();
-  (this.state.fun) ? 
-  this.setState({
-    fun:false
-  })
-  :
-  this.setState({
-    fun:true
-  })
+changeState(){
+  console.log(this.state.fun)
+}
+
+noFun(){
+console.log(this.state.noFun)
 }
 
   render(){
