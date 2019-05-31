@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-export default function FunStuff (props){
- 
-  return (
-    <form onSubmit={props.changeState}>
-    <button>The Fun Button!</button>
-    </form>
-  )
+export default function FunPage (props){
+    return (
+        <form onSubmit={props.changeState}>
+            <h1>Wow I found the Fun! So Much Fun!</h1>
+            <button>To Much Fun Go Back!</button>
+        </form>
+    )
 }
