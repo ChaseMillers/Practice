@@ -42,8 +42,8 @@ noFun(){
 
   render(){
     const value ={
-      fun: this.fun,
-      noFun: this.noFun,
+      fun: ()=> this.fun(),
+      noFun: ()=> this.noFun(),
       state: this.state
     }
 

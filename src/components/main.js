@@ -9,7 +9,7 @@ export default function Main(props){
         {(context) => (
         <div>
         <h1>The Fun.. Where is it?</h1>
-        <button onClick={()=>context.noFun()}>Tell the Console How You Feel</button>
+        <button onClick={context.noFun}>Tell the Console How You Feel</button>
         <br/>
             <Link
                 role="button"
