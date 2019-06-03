@@ -4,7 +4,7 @@ import FunStuff from './FunStuff'
 export default function Child (props){
     return(
         <div>
-            <FunStuff changeState={props.changeState}/>
+            <FunStuff />
         </div>
     )
 }
